@@ -17,19 +17,17 @@ function App() {
 
     const handleScroll = (e) => {
       e.preventDefault();
-      const targetId = e.target.getAttribute('href').substring(1);
-      document.getElementById(targetId).scrollIntoView({ behavior: 'smooth' });
+      const targetId = e.target.getAttribute('href')?.substring(1);
+      const target = document.getElementById(targetId);
+      if (target) target.scrollIntoView({ behavior: 'smooth' });
     };
 
-    document.querySelectorAll('nav ul li a').forEach((anchor) => {
-      anchor.addEventListener('click', handleScroll);
-    });
+    const anchors = document.querySelectorAll('nav ul li a');
+    anchors.forEach((anchor) => anchor.addEventListener('click', handleScroll));
 
     return () => {
       cards.forEach((card) => observer.unobserve(card));
-      document.querySelectorAll('nav ul li a').forEach((anchor) => {
-        anchor.removeEventListener('click', handleScroll);
-      });
+      anchors.forEach((anchor) => anchor.removeEventListener('click', handleScroll));
     };
   }, []);
 
@@ -42,6 +40,10 @@ function App() {
           margin: 0;
           padding: 0;
           box-sizing: border-box;
+        }
+
+        .App {
+          padding-bottom: 4rem; /* Added to prevent footer overlap */
         }
 
         body {
@@ -202,8 +204,7 @@ function App() {
           padding: 2rem;
           border-top: 2px solid #ff00ff;
           box-shadow: 0 -5px 20px rgba(255, 0, 255, 0.3);
-          position: fixed;
-          bottom: 0;
+          position: relative;
           width: 100%;
         }
 
@@ -236,7 +237,6 @@ function App() {
         }
       `}</style>
 
-      {/* Navigation */}
       <nav>
         <div className="logo">Dibyajyoti Pati</div>
         <ul>
@@ -247,7 +247,6 @@ function App() {
         </ul>
       </nav>
 
-      {/* Header */}
       <header>
         <div>
           <h1>Dibyajyoti Pati</h1>
@@ -255,7 +254,6 @@ function App() {
         </div>
       </header>
 
-      {/* About Section */}
       <section id="about" className="card">
         <h2>About Me</h2>
         <p>
@@ -263,7 +261,6 @@ function App() {
         </p>
       </section>
 
-      {/* Skills Section */}
       <section id="skills" className="card">
         <h2>Key Skills</h2>
         <ul>
@@ -282,7 +279,6 @@ function App() {
         </ul>
       </section>
 
-      {/* Experience Section */}
       <section id="experience" className="card">
         <h2>Experience</h2>
         <h3>Junior Consultant – IGA/IAM & Cybersecurity</h3>
@@ -312,7 +308,6 @@ function App() {
         </ul>
       </section>
 
-      {/* Contact Section */}
       <section id="contact" className="card">
         <h2>Contact Me</h2>
         <p>Email: dibyajyotipati1998@gmail.com</p>
@@ -325,7 +320,6 @@ function App() {
         </p>
       </section>
 
-      {/* Footer */}
       <footer>
         <p>© 2025 Dibyajyoti Pati. All rights reserved.</p>
       </footer>
