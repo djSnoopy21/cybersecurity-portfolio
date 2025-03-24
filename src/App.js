@@ -310,7 +310,11 @@ function App() {
 
       <section id="contact" className="card">
         <h2>Contact Me</h2>
-        <p>Email: dibyajyotipati1998@gmail.com</p>
+        <p><img
+                src="https://cdn-icons-png.flaticon.com/512/732/732200.png" alt="Email Icon"
+                style="height: 14px; vertical-align: middle; margin-right: 4px;" /> <a
+                href="mailto:dibyajyotipati1998@gmail.com"
+                style="color: #0B3D91; text-decoration: none;">dibyajyotipati1998@gmail.com</a></p>
         <p>Phone: +91 7008846982</p>
         <p>
           LinkedIn:{' '}
