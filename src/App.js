@@ -310,16 +310,56 @@ function App() {
 
       <section id="contact" className="card">
         <h2>Contact Me</h2>
-        <p><img
-                src="https://cdn-icons-png.flaticon.com/512/732/732200.png" alt="Email Icon"
-                style="height: 14px; vertical-align: middle; margin-right: 4px;" /> <a
-                href="mailto:dibyajyotipati1998@gmail.com"
-                style="color: #0B3D91; text-decoration: none;">dibyajyotipati1998@gmail.com</a></p>
-        <p>Phone: +91 7008846982</p>
         <p>
-          LinkedIn:{' '}
-          <a href="https://www.linkedin.com/in/dibyajyoti-pati-21dec1998" style={{ color: '#00ffff', textDecoration: 'none' }}>
-            linkedin.com/in/dibyajyoti-pati
+          <img
+            src="https://cdn-icons-png.flaticon.com/512/732/732200.png"
+            alt="Email Icon"
+            style={{ height: '14px', verticalAlign: 'middle', marginRight: '4px' }}
+          />
+          <a
+            href="mailto:dibyajyotipati1998@gmail.com"
+            style={{ color: '#00ffff', textDecoration: 'none' }}
+          >
+            dibyajyotipati1998@gmail.com
+          </a>
+        </p>
+        <p>
+          <img
+            src="https://cdn-icons-png.flaticon.com/512/597/597177.png"
+            alt="Phone Icon"
+            style={{ height: '14px', verticalAlign: 'middle', marginRight: '4px' }}
+          />
+          <a
+            href="tel:+917008846982"
+            style={{ color: '#00ffff', textDecoration: 'none' }}
+          >
+            +91-70088-46982
+          </a>
+        </p>
+        <p>
+          <img
+            src="https://cdn-icons-png.flaticon.com/512/174/174857.png"
+            alt="LinkedIn Icon"
+            style={{ height: '14px', verticalAlign: 'middle', marginRight: '4px' }}
+          />
+          <a
+            href="https://www.linkedin.com/in/dibyajyoti-pati-21dec1998/"
+            style={{ color: '#00ffff', textDecoration: 'none' }}
+          >
+            LinkedIn
+          </a>
+        </p>
+        <p>
+          <img
+            src="https://cdn-icons-png.flaticon.com/512/25/25231.png"
+            alt="GitHub Icon"
+            style={{ height: '14px', verticalAlign: 'middle', marginRight: '4px' }}
+          />
+          <a
+            href="https://github.com/djSnoopy21"
+            style={{ color: '#00ffff', textDecoration: 'none' }}
+          >
+            GitHub
           </a>
         </p>
       </section>
